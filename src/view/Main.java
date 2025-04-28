@@ -58,10 +58,10 @@ public class Main {
                                 orderManager.printHistory();
                                 break;
                                 case 9:
-                                    orderManager.saveToFile("D:\\Module 2\\Minitest7\\src\\storage\\orderStorage");
+                                    orderManager.saveToFile("D:\\Module 2\\Minitest7\\src\\storage\\demo");
                                     break;
                                     case 10:
-                                        orderManager.loadFromFile("D:\\Module 2\\Minitest7\\src\\storage\\orderStorage");
+                                        orderManager.loadFromFile("D:\\Module 2\\Minitest7\\src\\storage\\demo");
                                         break;
                                         case 0:
                                             System.out.println("Goodbye");

@@ -68,8 +68,8 @@ public class OrderManager {
             FileOutputStream fos = new FileOutputStream(file);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(orders);
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            oos.close();
+            fos.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -82,6 +82,8 @@ public class OrderManager {
             FileInputStream fis = new FileInputStream(file);
             ObjectInputStream ois = new ObjectInputStream(fis);
             orders = (ArrayList<Order>) ois.readObject();
+            ois.close();
+            fis.close();
         } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
